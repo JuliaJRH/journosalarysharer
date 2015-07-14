@@ -22,7 +22,7 @@ limitations under the License.
 
 body {
   color: #222;
-  font: 13px/18px arial, sans-serif;
+  font: 13px/18px Roboto, sans-serif;
   margin: 0;
 }
 
@@ -86,7 +86,7 @@ h4,
 h5,
 h6 {
   color: #000;
-  font: 16px/24px arial, sans-serif normal;
+  font: 16px/24px Roboto, sans-serif normal;
 }
 
 a {
@@ -116,7 +116,7 @@ a:hover {
 .secondary,
 .small {
   color: #777;
-  font: 11px/16px arial, sans-serif;
+  font: 11px/16px Roboto, sans-serif;
 }
 
 /* TABLES */
@@ -177,7 +177,7 @@ input[type="submit"] {
   box-shadow: none;
   color: #333;
   cursor: default;
-  font-family: arial, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 11px;
   font-weight: bold;
   height: 29px;
@@ -606,7 +606,7 @@ select {
   border-radius: 2px;
   color: #333;
   cursor: default;
-  font-family: arial, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 11px;
   font-weight: bold;
   height: 29px;
@@ -690,7 +690,7 @@ textarea {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: #000;
-  font-family: arial, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 13px;
   font-weight: normal;
   margin: 0;
