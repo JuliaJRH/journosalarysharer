@@ -121,6 +121,13 @@ a:hover {
 
 /* TABLES */
 
+/* Class */
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 table {
   border-spacing: 0;
 }
