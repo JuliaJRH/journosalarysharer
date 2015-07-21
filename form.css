@@ -751,3 +751,26 @@ select[size]: disabled {
 textarea {
   resize: vertical;
 }
+
+/* custom */
+
+.ss-form {
+  font-size: 22px;
+  text-align: center;
+}
+.ss-form ul {
+  width:60%;
+  margin:0 20%;
+}
+
+.ss-form ul li {
+  list-style: none;
+  text-align: left;
+}
+
+.ss-form ul li span {
+  font-size:16px;
+}
+.ss-item {
+  padding:20px;
+}
