@@ -753,7 +753,11 @@ textarea {
   resize: vertical;
 }
 
-/* custom */
+/* custom form */
+.center {
+  position:relative;
+  margin:0 33.3%;
+}
 .ss-question-list {
   margin-left:0!important;
 }
@@ -762,10 +766,6 @@ textarea {
 }
 .ss-form-entry {
   padding:20px;
-}
-.ss-choices {
-  position:relative;
-  margin:0 33.3%;
 }
 .ss-form ul.ss-choices li {
   list-style: none;
@@ -804,14 +804,52 @@ textarea {
   width:90%;
 }
 
+/* sharing page */
+.trust,
+.context {
+  float:left;
+}
+
+.trust {
+  width:110%;
+}
+
+.contexts span,
+.share-texts span {
+  display:none;
+}
+
+.contexts span.active,
+.share-texts span.active,
+.share-texts span.common {
+  display:inline-block;
+} 
+
+.trust-level {
+  float:left;
+  width:15%;
+  margin-right:5%;
+  padding:20px 0;
+}
+
+.context,
+.share-block {
+  display:block;
+  width:100%;
+  height:200px;
+  margin:20px 0;
+  padding:20px;
+  border:1px solid #222;
+}
+
 @media only screen and (max-width : 980px) {
-  .ss-choices {
+  .center {
     margin:0 20%;
   }
 }
 
 @media only screen and (max-width : 400px) {
-  .ss-choices {
+  .center {
     margin:0;
   }
 }
