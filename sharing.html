@@ -7,8 +7,6 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
 
   <title>Journo Salary Sharer</title>
-  <!-- Third theme, via Google: https://ssl.gstatic.com/docs/script/css/add-ons1.css -->
-  <link href="form.css" rel="stylesheet">
   <!-- Bootstrap -->
   <!-- Latest compiled and minified CSS -->
   <link href=
@@ -17,9 +15,11 @@
   <link href=
   "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"
   rel="stylesheet">
-  <link href='https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/normalize.min.css' rel='stylesheet'>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js'></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <!-- Third theme, via Google: https://ssl.gstatic.com/docs/script/css/add-ons1.css -->
+  <link href="form.css" rel="stylesheet">
+  <link href="favicon.png" rel="shortcut icon" type="image/png">
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -55,9 +55,57 @@
       </div>
     </div>
   </div>
+  <div class='container-fluid'>
+    <div class='center'>
+      <h1>Now on a scale from "hell no" to "oh sure," how do you feel about telling other people how much you make? </h1>
+      <div class="btn-group" role="group" aria-label="trust-scale">
+        <button type="button" class="btn btn-default" data-text='text1' data-share='share1'>Not a chance</button>
+        <button type="button" class="btn btn-default" data-text='text2' data-share='share2'>Maybe if someone I trust asks</button>
+        <button type="button" class="btn btn-default" data-text='text3' data-share='share3'>Convince me</button>
+        <button type="button" class="btn btn-default" data-text='text4' data-share='share4'>Only with specific people</button>
+        <button type="button" class="btn btn-default" data-text='text5' data-share='share5'>I'm game, NBD</button>
+      </div>
+      <div class='texts'>
+        <div id='text1'>
+          Fair enough. Would you mind sharing a link to this survey for research purposes, if nothing else?
+        </div>
+        <div id='text2'>
+          Text 2
+        </div>
+        <div id='text3'>
+          Once you know how much other people in your position make, you'll be better positioned to negotiate for that raise or new job. So be the one to show your cards first. It's very "if you show me yours, I'll show you mine" topic. Talking about your salary shows conficense and business savvy. Go be saavy, believe in you!
+        </div>
+        <div id='text4'>
+          Sure, go ahead and email or talk t happy hour with a few people about how valuable knowing what other people in your industry mak in similar jobs. I'd encourage you to at least tweet out that you're interested in chatting with people on the topic. And be the brave one who reveals your number first.
+        </div>
+        <div id='text5'>
+          Text 5
+        </div>
+      </div>
+      <div class='share'>
+        <h1>Here's some suggested sharing text if you don't feel like writing your own. </h1>
+        <div class='share-text'>
+          <span class='common'>By sharing and talking about our salaries, we can both better negotiate for raises.</span>
+          <span id='share1'>Help a researcher: Report how much money you make in your journalism job: </span>
+          <span id='share2'>Share text2</span>
+          <span id='share3'><!-- record number --></span>
+          <span id='share4'>I'd love to chat with you about it.</span>
+          <span id='share5'>Share text5</span>
+          <span class='common'>www.journosalaryshare.com</span>
+        </div>
+      </div>
+      <div class='email'>
+        Before you go... We’d like to be able to tell you how your salary compares to others in your field, but we’re not quite ready. If you would like to get an email from us once we have enough responses to be statistically useful, enter your email:
+        <!-- mail chimp embed code -->
+      </div>
+    </div>
+  </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+  </script>
   </body>
 </html>
