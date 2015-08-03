@@ -815,14 +815,16 @@ textarea {
   width:110%;
 }
 
+/*.share-texts {
+  display:none;
+}*/
+
 .contexts span,
-.share-texts span {
+.share-texts span{
   display:none;
 }
 
-.contexts span.active,
-.share-texts span.active,
-.share-texts span.common {
+.contexts span.active {
   display:inline-block;
 } 
 
@@ -840,7 +842,7 @@ textarea {
   height:200px;
   margin:20px 0;
   padding:20px;
-  border:1px solid #222;
+  background:#ececec;
 }
 
 @media only screen and (max-width : 980px) {
