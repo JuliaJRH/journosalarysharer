@@ -126,6 +126,11 @@
 
 			generateShare();
 
+			$('#generate').on('click',function(){
+				generateShare();
+				$('.share-block').addClass('active');
+			});
+
 			function correspond(element,dataAttr,matchingAttr){
 				element.removeClass('active');
 				element
@@ -145,12 +150,6 @@
 
 				$('.share-block').html(shareText);
 			}
-
-			$('#generate').on('click',function(){
-				generateShare();
-				$('.share-block').addClass('active');
-			});
-
 	</script>
 	</body>
 </html>

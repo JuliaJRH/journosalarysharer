@@ -836,12 +836,15 @@ textarea {
 }
 
 .context,
-.share-block {
+.share-block.active {
   display:block;
   width:100%;
   height:200px;
   margin:20px 0;
   padding:20px;
+}
+
+.context {
   background:#ececec;
 }
 
