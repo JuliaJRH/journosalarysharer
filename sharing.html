@@ -150,8 +150,6 @@
 			correspond(context,'value',currentValue);
 			correspond(share,'value',currentValue);
 
-			generateShare();
-
 			$('#generate').on('click',function(){
 				generateShare();
 				$('.share-block').addClass('active');
@@ -166,16 +164,40 @@
 
 			function generateShare(){
 
-				$('.shareblock').html('');
+				$('.share-block textarea').html('');
 
 				var shareText = [
 					$('.share-text.common').first().html(),
-					$('.share-text.active').html(),
-					$('.share-text.common').last().html()
+					$('.share-text.active').html()
+					// $('.share-text.common').last().html()
 				].join(' ');
 
-				$('.share-block').html(shareText);
+				$('.share-block textarea').html(shareText);
+
+				// recreate the tweet button
+				twttr.ready(function(){
+					twttr.widgets.createShareButton(
+						'http://juliajrh.github.io/journosalarysharer/',
+						document.getElementById('twitter-button'),
+						{
+							text: shareText,
+							size: 'large',
+							count: 'none'
+						}
+					);
+				})
 			}
+
+			// copy to clipboard
+			$('body')
+				.on('copy','#copy',function(e) {
+					e.clipboardData.clearData();
+					e.clipboardData.setData('text/plain', $('.share-block textarea').html());
+					e.preventDefault();
+				})
+				.on('aftercopy','#copy',function(e){
+					$('.share-block textarea').select();
+				});
 	</script>
 	</body>
 </html>
