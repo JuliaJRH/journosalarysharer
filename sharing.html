@@ -75,17 +75,17 @@
 				<span class='context' data-value='400'>Sure, go ahead and email or talk to happy hour with a few people about how valuable knowing what other people in your industry mak in similar jobs. I'd encourage you to at least tweet out that you're interested in chatting with people on the topic. And be the brave one who reveals your number first.</span>
 				<span class='context' data-value='500'>Text 5</span>
 			</div>
+			<button id='generate'>Sounds good, suggest some sharing text to me!</button>
 			<div class='share-texts'>
-					<h1>Here's some suggested sharing text if you don't feel like writing your own. </h1>
-					<div class='share-block'>
-						<span class='common'>By sharing and talking about our salaries, we can both better negotiate for raises.</span>
-						<span class='share-text' data-value='100'>Help a researcher: Report how much money you make in your journalism job: </span>
-						<span class='share-text' data-value='200'>Share text2</span>
-						<span class='share-text' data-value='300'>record number<!--function needed--></span>
-						<span class='share-text' data-value='400'>I'd love to chat with you about it.</span>
-						<span class='share-text' data-value='500'>Share text5</span>
-						<span class='common'>www.journosalaryshare.com</span>
-					</div>
+				<textarea class='share-block' name="share-block" rows='10' cols='50'></textarea>
+
+				<span class='share-text common'>By sharing and talking about our salaries, we can both better negotiate for raises.</span>
+				<span class='share-text' data-value='100'>Help a researcher: Report how much money you make in your journalism job: </span>
+				<span class='share-text' data-value='200'>Share text2</span>
+				<span class='share-text' data-value='300'>I earn [insert your salary]/year. What about you?</span>
+				<span class='share-text' data-value='400'>I'd love to chat with you about it.</span>
+				<span class='share-text' data-value='500'>Share text5</span>
+				<span class='share-text common'>www.journosalaryshare.com</span>
 			</div>
 			<div class='email'>
 				Before you go... We’d like to be able to tell you how your salary compares to others in your field, but we’re not quite ready. If you would like to get an email from us once we have enough responses to be statistically useful, enter your email:
@@ -98,10 +98,12 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/zclip/1.1.2/jquery.zclip.min.js"></script>
 	<script>
+		 // slider with jquery ui
 		 var trust = $('.trust-level'),
-				 context = $('.context'),
-				 share = $('.share-text');
+			context = $('.context'),
+			share = $('.share-text');
 
 			$( "#slider" ).slider({
 				value:300,
@@ -111,17 +113,18 @@
 				slide: function(e, ui ) {
 					var level = ui.value;
 
-					// correspond(trust,'value',level);
 					correspond(context,'value',level);
 					correspond(share,'value',level);
+
 				}
 			});
  
-			var currentValue = $('#slider').slider('value')
+			var currentValue = $('#slider').slider('value');
 
-			// correspond(trust,'value',currentValue);
 			correspond(context,'value',currentValue);
 			correspond(share,'value',currentValue);
+
+			generateShare();
 
 			function correspond(element,dataAttr,matchingAttr){
 				element.removeClass('active');
@@ -129,6 +132,25 @@
 					.filter(function(){return $(this).data(dataAttr) === matchingAttr;})
 					.addClass('active');
 			}
+
+			function generateShare(){
+
+				$('.shareblock').html('');
+
+				var shareText = [
+					$('.share-text.common').first().html(),
+					$('.share-text.active').html(),
+					$('.share-text.common').last().html()
+				].join(' ');
+
+				$('.share-block').html(shareText);
+			}
+
+			$('#generate').on('click',function(){
+				generateShare();
+				$('.share-block').addClass('active');
+			});
+
 	</script>
 	</body>
 </html>
