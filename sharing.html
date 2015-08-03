@@ -195,7 +195,7 @@
 				].join(' ');
 
 				$('.share-block textarea').html(shareText);
-
+				$('#twitter-button').empty();
 				// recreate the tweet button
 				twttr.ready(function(){
 					twttr.widgets.createShareButton(
