@@ -69,6 +69,7 @@
 				<span class='trust-level' data-value='500'>I'm game, NBD</span>
 			</div>
 			<div class='contexts'>
+				<!-- context options -->
 				<span class='context' data-value='100'>Fair enough. Would you mind sharing a link to this survey for research purposes, if nothing else?</span>
 				<span class='context' data-value='200'>Text 2</span>
 				<span class='context' data-value='300'>Once you know how much other people in your position make, you'll be better positioned to negotiate for that raise or new job. So be the one to show your cards first. It's very "if you show me yours, I'll show you mine" topic. Talking about your salary shows conficense and business savvy. Go be saavy, believe in you!</span>
@@ -77,15 +78,20 @@
 			</div>
 			<button id='generate'>Sounds good, suggest some sharing text to me!</button>
 			<div class='share-texts'>
-				<textarea class='share-block' name="share-block" rows='10' cols='50'></textarea>
 
+				<div class='share-block'>
+					<textarea name="share-block" rows='5' cols='50'></textarea>
+					<div><button id='copy'>Copy to clipboard for email or fb posts</button></div>
+					<div id='twitter-button'></div></li>
+				</div>
+
+				<!-- share text options. all share text will have the common text -->
 				<span class='share-text common'>By sharing and talking about our salaries, we can both better negotiate for raises.</span>
 				<span class='share-text' data-value='100'>Help a researcher: Report how much money you make in your journalism job: </span>
 				<span class='share-text' data-value='200'>Share text2</span>
 				<span class='share-text' data-value='300'>I earn [insert your salary]/year. What about you?</span>
 				<span class='share-text' data-value='400'>I'd love to chat with you about it.</span>
 				<span class='share-text' data-value='500'>Share text5</span>
-				<span class='share-text common'>www.journosalaryshare.com</span>
 			</div>
 			<div class='email'>
 				Before you go... We’d like to be able to tell you how your salary compares to others in your field, but we’re not quite ready. If you would like to get an email from us once we have enough responses to be statistically useful, enter your email:
