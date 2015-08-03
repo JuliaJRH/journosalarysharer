@@ -806,6 +806,11 @@ textarea {
 }
 
 /* sharing page */
+
+button {
+  width:100%;
+}
+
 .trust,
 .context {
   float:left;
@@ -815,12 +820,9 @@ textarea {
   width:110%;
 }
 
-/*.share-texts {
-  display:none;
-}*/
-
 .contexts span,
-.share-texts span{
+.share-texts span,
+.share-block {
   display:none;
 }
 
@@ -839,13 +841,23 @@ textarea {
 .share-block.active {
   display:block;
   width:100%;
-  height:200px;
-  margin:20px 0;
-  padding:20px;
+  padding:20px 0;
 }
 
 .context {
+  padding:20px;
+  margin:20px 0;
+  height:200px;
   background:#ececec;
+}
+
+.share-block textarea {
+  width:inherit;
+  margin-bottom:20px;
+}
+
+.share-block div {
+  float:left;
 }
 
 @media only screen and (max-width : 980px) {
