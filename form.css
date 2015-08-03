@@ -754,6 +754,7 @@ textarea {
 }
 
 /* custom form */
+.ss-choices,
 .center {
   position:relative;
   margin:0 33.3%;
