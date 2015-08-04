@@ -808,6 +808,12 @@ h2.dashed {
 
 /* sharing page */
 
+#slider {  /* Align slider detents with centers of text options */
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
 button {
   width:100%;
 }
