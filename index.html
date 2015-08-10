@@ -764,5 +764,28 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 	 <script src=
 	"http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+         <!-- Disable submit button for 60 seconds after click -->
+        <script>
+          (function(window, $) {
+            var $form = $('#ss-form'),
+              $submit = $('#ss-submit');
+
+            $form.on('submit', function disableSubmit(event) {
+              // Disable the button and change its message so the user knows
+              // what's up.
+              $submit.prop('disabled', true).val('Submitting...');
+              // Re-enable the button in 60 seconds, assuming we're still here.
+              window.setTimeout(function enableSubmit() {
+                $submit.prop('disabled', false).val(
+                  'Submission failed. Click to try again.');
+              }, 30 * 1000);
+              // Just to be nice, let the user know stuff's still going on
+              // halfway through that waiting period.
+              window.setTimeout(function reassureUser() {
+                $submit.val('Still trying to submit...');
+              }, 10 * 1000);
+            });
+          })(this, window.jQuery);
+        </script>
 </body>
 </html>
