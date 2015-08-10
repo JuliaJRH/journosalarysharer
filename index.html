@@ -778,12 +778,12 @@
               window.setTimeout(function enableSubmit() {
                 $submit.prop('disabled', false).val(
                   'Submission failed. Click to try again.');
-              }, 60 * 1000);
+              }, 30 * 1000);
               // Just to be nice, let the user know stuff's still going on
               // halfway through that waiting period.
               window.setTimeout(function reassureUser() {
                 $submit.val('Still trying to submit...');
-              }, 30 * 1000);
+              }, 10 * 1000);
             });
           })(this, window.jQuery);
         </script>
