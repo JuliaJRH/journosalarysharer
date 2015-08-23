@@ -801,6 +801,8 @@ h2.dashed {
 }
 div.dashed {
   padding:10px 0;
+  margin-top:20px;
+  margin-bottom:10px;
   border-top:1px dashed #222;
   border-bottom:1px dashed #222;
 }
