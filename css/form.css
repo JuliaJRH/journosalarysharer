@@ -799,6 +799,11 @@ h2.dashed {
   border-top:1px dashed #222;
   border-bottom:1px dashed #222;
 }
+div.dashed {
+  padding:10px 0;
+  border-top:1px dashed #222;
+  border-bottom:1px dashed #222;
+}
 #ss-submit {
   position:absolute;
   left: 0;
